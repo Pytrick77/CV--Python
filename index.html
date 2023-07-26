@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="py-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+    <style>
+   body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    
+    a {
+       text-decoration: none;
+       color: black;
+    }
+
+    h1 {
+      font-size: 80px;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .buttons-container {
+      margin-top: 20px;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 20px 40px;
+      margin: 5px;
+      background-color: white;
+      color: darkred;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Cuzinho hoje?</h1>
+        <div class="buttons-container">
+            <button>
+                <a href="https://i.ytimg.com/vi/SvwVE19FQz0/maxresdefault.jpg">Sim</a>
+            </button>
+            <button id="no">Não</button>
+        </div>
+    </div>
+    <script>
+        let button = document.getElementById('no');
+        let height = window.innerHeight - 50;
+        let width = window.innerWidth - 50;
+        button.addEventListener('mouseover', function(){
+            button.style.position = "absolute";
+            button.style.top =  Math.random() * height + "px"
+            button.style.left = Math.random() * width + "px"
+        })
+    </script>
+</body>
+</html>
